@@ -1,0 +1,694 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/10/2020, 09:18:08 PM
+    Author     : Valentina
+*/
+
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+/*PERFIL DE FUENTE */
+@font-face {
+    font-family: 'cursiva';
+    src: url('fonts/bagsmandemoregular-webfont.woff2') format('woff2'),
+         url('fonts/bagsmandemoregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*CLASE CENTRADO PARA LOS SECTION Y ARTICLE*/
+.centrado{
+    width: 65%;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+/*--------------------------------------------------------*/
+
+/*BOTONES GENERALES*/
+
+#index section:nth-of-type(1) a, 
+#menu section:nth-of-type(1) a,
+#menu .contenedorMenuDos a,
+#menu .contenedorMenu a,
+#index .eventos > article a,
+article:nth-of-type(1) .protocolo a{
+    background-color: #c1cb51;
+    border-radius: .5em;
+    padding: .2em 1em;
+    text-decoration: none;
+    color: white;
+}
+
+#index section:nth-of-type(1) a:hover, 
+#menu section:nth-of-type(1) a:hover,
+#menu .contenedorMenuDos a:hover,
+#menu .contenedorMenu a:hover,
+#index .eventos > article a:hover,
+article:nth-of-type(1) .protocolo a{
+    background-color: #6c7c42;
+}
+
+/*BOTONES DE LOS MENU*/
+.botonMenu{
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2em;
+    
+}
+.botonMenu a{
+    background-color: #ebd86f;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    border-radius: .5em;
+    padding: .2em 1em;
+}
+.botonMenu a:hover{
+    background: #ff9230;
+    color: white;
+}
+/*--------------------------------------------------------*/
+
+
+/*HEADER*/
+
+header{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2em; 
+    padding: 1.5em 0;
+}
+
+input[type=search]{
+    width: 200px;
+    height: 2rem;
+    background: #2b303b;
+    border: none;
+    font-size: 1em;
+    color: #63717f;
+    padding-left: 3em;
+    border-radius: 2em;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+input[type=search]:focus{
+    background-position-x: rigth;
+    border: 0;
+    outline: 0;
+    outline: 0px; /*LINEA DEL HOVER*/
+    width: 300px;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+}
+
+.icon{
+    position: absolute;
+    margin-left: 17px;
+    margin-top: 8px;
+    z-index: 1;
+    color: #4f5b66;
+}
+
+.icon2{
+    font-size: 2em;
+}
+.icon2 i:hover{
+    color: #4d6a1b;
+    transition: 1s;
+}
+
+/*----------BARRA DE INICIO---------*/
+nav{
+    background-color: #6c7c42;
+    position: sticky;
+    top: 0;
+    z-index: 800;    
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+
+nav > ul{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    list-style-type: none;
+}
+
+nav>ul>li{
+    flex: 1;  
+    position: relative;
+}
+
+nav li ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+nav li:hover ul{
+   height: 250px;
+   width: 100%;
+}
+
+
+nav a, nav a:link{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-size: 1.2em;
+    background-color: #6c7c42;
+}
+nav a:hover{
+    background-color: white;
+    color: #000;
+}
+
+.activo a{
+    pointer-events: none;
+    color: #000;	
+}
+
+/*--------------------------------------------------------*/
+
+/*PRESENTACIÓN*/
+
+#index .inicio > h1{
+    font-size: 3.5em;
+    padding-bottom: .8em;
+    font-family: "cursiva", cursive;
+    font-weight: 100;
+    color: #000;
+}
+
+  section:nth-of-type(1){
+    background: url(img/comidaVegetariana.jpg) no-repeat center center fixed;     
+    text-align: center;
+    padding: 30vh 0; 
+    box-sizing: border-box;
+    background-size: cover; 
+}
+
+#index section:nth-of-type(1) .inicio{
+    background-color: rgba(255,255,255,0.4);
+    width: 40%;
+    margin: auto;
+    border-radius: .8em;
+    padding: 2em 0;
+}
+/*--------------------------------------------------------*/
+
+
+/*ARTICLE COVID*/
+
+#index article:nth-of-type(1) h2{
+    color: #413c2b;
+    padding-bottom: 1em;
+}
+
+#index article:nth-of-type(1) .covid h3{
+    color: #ff9230;
+    padding-bottom: .5em;
+}
+
+article:nth-of-type(1).Coronavirus{
+     background: 
+        #ebd86f url(img/covidFond2.jpg);
+    background-blend-mode: multiply;
+}
+
+article:nth-of-type(1) .Coronavirus{
+    background-color: #926c47;
+}
+
+#index article:nth-of-type(1) .covid  img{
+    width: 200px;
+}
+
+article:nth-of-type(1) .covid,
+#menu .contenidoCeliaco{
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+}
+
+article:nth-of-type(1) .protocolo a{
+    background-color: #ff9230;
+    bottom: 0;    
+    position: absolute;    
+    right: 0;    
+    padding: .3em 1em;
+}
+
+article:nth-of-type(1) .protocolo a:hover{
+    background-color: white;
+    color: #ff9230;
+}
+article:nth-of-type(1) .protocolo{
+    position: relative;
+}
+/*--------------------------------------------------------*/
+
+
+
+/* SECCION EVENTOS */
+
+#index section:nth-of-type(2) {
+    background: 
+        white url(img/covidFond2.jpg) fixed;
+    background-blend-mode: multiply;
+}
+#index section:nth-of-type(2) h2{
+    width: 100%;
+    font-size: 1.5em;
+    color: #6c7c42;
+}
+#index section:nth-of-type(2) h3{
+    padding: .4em 0 .4em;
+}
+.eventos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9em;
+    padding-bottom: 100px;
+ }
+ 
+ #index .eventos figcaption{
+     width: 100%;
+    height: 0%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+    position: absolute;
+    overflow: hidden;
+    padding: 0 20px;
+    bottom:0;
+    left:0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Pepito";
+    color: white;
+    font-size: 2em;
+ }
+ 
+#index .eventos > article > figure{
+    position: relative;
+}
+#index .eventos figure:hover figcaption{
+    height: 100%;
+}
+
+.eventos article figure img{
+    width: 100%;
+    display: block;
+}
+
+section:nth-of-type(2)  .eventos > article{
+    flex: 1;
+    min-width: 250px;
+    padding: 2% 0;
+    position: relative;  
+}
+
+#index section:nth-of-type(2) .eventos > article  figure{
+    position: relative;
+}
+#index section:nth-of-type(2) .eventos > article a{
+    padding: .1em .3em;
+    font-size: .6em;
+}
+
+.botonEvento{
+    margin-top: 2.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+/*--------------------------------------------------------*/
+
+
+/*FORMULARIO*/
+
+/* TITULO Y SPAN*/
+#index section:nth-of-type(3) h3{
+    font-size: 1.5em;
+    color: #6c7c42;
+    padding-bottom: .3em;
+}
+#index section:nth-of-type(3) span{
+    font-weight: 600;
+}
+
+/*FORMULARIO*/
+ #index section:nth-of-type(3){
+    background: url(img/fondoformulario.jpg) no-repeat center center fixed;
+    padding: 20vh 0;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.formulario{
+    background-color: rgba(255,255,255,0.6);
+    padding: 1em 1em;
+    border-radius: 1em;
+}
+input[type=text], select{
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+ #comentarios{
+    width: 50%;
+    height: 130px;
+}
+.comentario{
+    padding: 1.5em;
+}
+
+input[type=submit] {
+    background-color: #ebd86f;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1em 0;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #ebd86f;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.formularioContenido{
+    display: flex;
+}
+.contenidoDos{
+    display:block;
+    width: 23%;
+    padding: 0 1em;
+}
+
+label{
+    padding: .35em;
+}
+.etapa{
+    padding: 0;
+}
+/*--------------------------------------------------------*/
+
+
+/*MENU ---SEGUNDO INDEX----------*/
+
+#menu .servicios2 > h1{
+    font-size: 3.5em;
+    font-family: "cursiva", cursive;
+    font-weight: 100;
+    color: white;
+}
+
+#menu .servicios2 > p{
+    font-size: 1.16em;
+}
+
+#menu section:nth-of-type(1){
+    background: url(img/fondoEvento.jpg) no-repeat center center fixed; 
+    text-align: left;
+}
+
+#menu section:nth-of-type(1) .servicioContenedor{
+    display: flex;
+}
+
+.servicios2{
+    position: relative;
+    color: white;
+    margin-right: 2em;
+}
+.servicios2 a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#menu h2{
+    color: #6c7c42;
+    padding: 1em 0;
+}
+
+/*-------TABLA----*/
+table {
+    background-color: rgba(255,255,255,0.4);
+    width: 100%;
+    margin-top: 2%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    height: 40px;
+    border: 0.5px solid rgba(240, 240, 240, 10);
+}
+
+thead{
+    background-color: #000;
+    color: white;
+}
+
+
+#menu section:nth-of-type(2){
+    background: beige url(img/covidFond2.jpg) fixed;
+    background-blend-mode: multiply;
+}
+
+#menu section:nth-of-type(2) img{
+    width: 100%;
+    height: 150px;
+}
+
+#menu  img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#menu img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.contenedorMenu{
+    display: grid;
+    grid-template: 
+    150px 150px 0px / repeat(4, 1fr);
+    color: black;
+    grid-gap: 2em;
+    background: beige;
+}
+
+.contenedorMenu > article:nth-of-type(2) {
+    background-image: url(img/copitos.jpg);
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding-top: 335px;
+}
+/*--------------------------------------------------------*/
+
+
+
+/*SEGUNDO MENÚ------*/
+
+#menu > article:nth-of-type(1){
+    background: 
+        white url(img/covidFond2.jpg) fixed;
+    background-blend-mode: multiply;
+}
+.contenedorMenuDos h3{
+    padding-bottom: .6em;
+}
+.contenedorMenuDos{
+    gap: .4em;
+    grid-template: 140px 110px 10px / repeat(6, 1fr);
+    display: grid;
+}
+
+#menu > article:nth-of-type(1) img{
+    max-width: 160px;
+}
+
+.contenedorMenuDos a, .contenedorMenu a{
+    font-size: 15px;
+    padding: .2em .3em;
+}
+
+#menu div:nth-of-type(4){
+    grid-column: 1/4;
+    background-image: url(img/wafles1.jpg);
+    background-repeat: no-repeat;
+}
+/*------------------------------------------*/
+
+
+/*TERCER MENU*/
+
+#menu .menuCeliaco{
+    background: 
+        beige url(img/covidFond2.jpg) fixed;
+    background-blend-mode: multiply;
+}
+
+.contenidoCeliaco  img{
+    width: 180px;
+}
+
+.contenidoCeliaco h3{
+    color: #4d6a1b;
+    padding-bottom: .3em;
+}
+/*------------------------------------------*/
+
+
+
+/*FLECHA*/
+section:nth-of-type(3) + a, 
+article:nth-of-type(2) + a{
+    background-color: #c1cb51;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 50;
+}
+section:nth-of-type(3) + a:hover, 
+article:nth-of-type(2) + a:hover{
+    background-color: #6c7c42;
+}
+section:nth-of-type(3) +a img, 
+article:nth-of-type(2) +a img{
+    width: 35px;
+}
+/*------------------------------------------*/
+
+
+/*ICONO DE WHATSAPP*/
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    right: 28px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+    bottom: 20%;
+}
+.whatsapp:hover{
+    background-color: #6c7c42;
+}
+.whatsapp-icon {
+    margin-top:15px;
+}
+/*------------------------------------------*/
+
+
+/*ANIMACION-------------------*/
+#index .animacion img{
+    mix-blend-mode: multiply;
+    -webkit-animation: animacionAuto 6s ease infinite;
+    transform: translateX(-200px) scale(-1,1);
+    -webkit-transform: translateX(-200px) scale(-1,1);
+    -moz-transform: translateX(-200px) scale(-1,1);
+    -ms-transform: translateX(-200px) scale(-1,1);
+    -o-transform: translateX(-200px) scale(-1,1);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+@keyframes animacionAuto {
+    0% {
+        transform: translateX(-200px) scale(-1,1);
+        -webkit-transform: translateX(-200px) scale(-1,1);
+        -moz-transform: translateX(-200px) scale(-1,1);
+        -ms-transform: translateX(-200px) scale(-1,1);
+        -o-transform: translateX(-200px) scale(-1,1);
+    }
+    50% {
+        transform: translateX(19vw) scale(-1,1);
+        -webkit-transform: translateX(19vw) scale(-1,1);
+        -moz-transform: translateX(19vw) scale(-1,1);
+        -ms-transform: translateX(19vw) scale(-1,1);
+        -o-transform: translateX(19vw) scale(-1,1);
+    }
+    50.1% {
+        transform: translateX(19vw) scale(1,1);
+        -webkit-transform: translateX(19vw) scale(1,1);
+        -moz-transform: translateX(19vw) scale(1,1);
+        -ms-transform: translateX(19vw) scale(1,1);
+        -o-transform: translateX(19vw) scale(1,1);
+    }   
+}
+
+/*------------------------------------------*/
+
+/*FOOTER*/
+footer{
+    background-color: #6c7c42;
+    padding: 15px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    display: block;
+    box-shadow: 0 0 50px RGB(0,0,0,.5);
+    font-size: 2em;
+}
+
+footer i{
+    color: #000;
+}
+footer i:hover{
+    color: #c1cb51;
+}
+
+/*------------------------------------------*/
